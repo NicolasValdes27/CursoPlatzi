@@ -57,4 +57,9 @@ export class AppComponent {
   addItem(): void{
     this.items.push(this.title);
   }
+
+  clickProduct(id: number): void{
+    console.log('product');
+    console.log(id);
+  }
 }

@@ -1,8 +1,6 @@
 <input type="text" [(ngModel)]="title" placeholder="Nombre">
 <!---{{title}}--->
 
-<app-product></app-product>
-
 <button (click)="addItem()">Add item</button>
 
 <ul>
@@ -12,11 +10,5 @@
 </ul>
 
 <div *ngFor="let product of products; index as i">
-  {{product.title}}
-  <img style="width: 250px;" [src]="product.image" alt="">
-  <div [ngSwitch]="product.price">
-    <p *ngSwitchCase="10000">Nueva oferta!</p>
-    <p *ngSwitchDefault>ashasg</p>
-  </div>
-  {{product.price}}
+  <app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
 </div>
