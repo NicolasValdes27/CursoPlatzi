@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StringifyOptions } from 'querystring';
+// import { StringifyOptions } from 'querystring';
 
 @Component({
   selector: 'app-cart',
@@ -7,8 +7,6 @@ import { StringifyOptions } from 'querystring';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-
-  itemList!: string;
 
   constructor() { }
 

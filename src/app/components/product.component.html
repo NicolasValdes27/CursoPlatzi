@@ -1,9 +1,7 @@
 <h3>soy un component producto</h3>
-{{product.title}}
+{{product.title | uppercase}}
 <img [src]="product.image" alt="">
-<div [ngSwitch]="product.price">
-    <p *ngSwitchCase="10000">Nueva oferta!</p>
-    <p *ngSwitchDefault>Precio normal</p>
-</div>
-{{product.price}}
+{{product.description | slice:0:10}}
+{{product.price | currency:money }}
+{{today | date: 'medium'}}
 <button (click)="addCart()">Agregar al carrito</button>
